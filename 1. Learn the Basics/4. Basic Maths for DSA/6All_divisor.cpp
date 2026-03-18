@@ -18,8 +18,7 @@ int main()
     {
       v.emplace_back(i);
 
-      if (n / i != i)
-      {
+      if (n / i != i){
         v.emplace_back(n / i);
       }
     }

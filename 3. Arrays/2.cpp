@@ -19,8 +19,8 @@ int main(){
     int second_largest;
     int largest = arr[n-1];
 
-    for(int i = n-1 ; i >= 0 ; i--){
-        if(arr[i] < largest) {
+    for(int i = n-2 ; i >= 0 ; i--){
+        if(arr[i] != largest) {
             second_largest = arr[i];
             cout<<second_largest;
             break;
