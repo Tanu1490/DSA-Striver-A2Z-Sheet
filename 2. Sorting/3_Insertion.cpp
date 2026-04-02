@@ -1,26 +1,35 @@
 #include<bits/stdc++.h>
 using namespace std;
  
+// TC - O(N^2)
+void insertionSort(int arr[] , int n){
+  for(int i = 0 ; i <= n-1 ; i++){
+    int j = i;
+    while(j > 0 && arr[j-1] > arr[j]){
+      int temp = arr[j];
+      arr[j] = arr[j-1];
+      arr[j-1] = temp;
+      j--;
+    }
+  }
+}
+
 int main(){
-  int n = 6;
-  int arr[n] = {13,46,24,52,20,9} ;
-
-  for(int i = n-1 ; i >=0 ; i-- ){
-
-    for(int j = 0 ; j <= i-1 ; j++){
-        if(arr[j] > arr[j+1]){
-          int temp = arr[j];
-          arr[j] = arr[j+1];
-          arr[j+1] = temp;
-        }
-      
+  int n;
+  cout << "size of array: ";
+  cin >> n;
+  int arr[n];
+  cout << "Enter elements of array :  ";
+  for (int i = 0; i < n; i++)
+  {
+    cin >> arr[i];
   }
-  }
-
-  for(int i= 0 ; i <= n-1 ; i++){
-    cout<<arr[i]<<" ";
-  }
+  insertionSort(arr, n);
   
-  
+  cout <<"Sorted array : ";
+  for (int i = 0; i < n; i++)
+  {
+     cout<<arr[i] << " ";
+  }
   return 0;
 }
