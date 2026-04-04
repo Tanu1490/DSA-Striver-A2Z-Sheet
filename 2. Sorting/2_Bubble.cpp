@@ -15,7 +15,7 @@ void bubbleSort(int arr[], int n){
   // }
   // }
 
-  // OPTIMIZED - O(n) -> best case
+  // OPTIMIZED - O(n) -> best case (when array is already sorted)
   for(int i = n-1 ; i >= 0 ; i--){
     int didSwap = 0;
     for(int j = 0 ; j <= i-1 ; j++){

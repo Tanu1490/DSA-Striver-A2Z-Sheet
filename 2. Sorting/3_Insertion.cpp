@@ -1,7 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
  
-// TC - O(N^2)
+// TC - O(N^2) 
+// OPTIMIZED - O(n) -> best case (when array is already sorted)
 void insertionSort(int arr[] , int n){
   for(int i = 0 ; i <= n-1 ; i++){
     int j = i;
@@ -12,7 +13,25 @@ void insertionSort(int arr[] , int n){
       j--;
     }
   }
+
+
+  // This version is used everywhere
+//   void insertionSort(int arr[], int n){
+//     for(int i = 1; i < n; i++){
+//         int key = arr[i];
+//         int j = i - 1;
+
+//         while(j >= 0 && arr[j] > key){
+//             arr[j + 1] = arr[j];
+//             j--;
+//         }
+
+//         arr[j + 1] = key;
+//     }
+// }
+ 
 }
+
 
 int main(){
   int n;
