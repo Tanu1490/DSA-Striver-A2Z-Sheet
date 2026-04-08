@@ -28,6 +28,7 @@ void explainStack(){
   // swapping
   stack<int> st1,st2;
   st1.swap(st2);
+  
 }
 int main(){
   explainStack();
