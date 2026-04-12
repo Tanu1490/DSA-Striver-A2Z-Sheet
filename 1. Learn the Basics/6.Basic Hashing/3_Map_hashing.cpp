@@ -12,6 +12,7 @@ int main()
     cout << "Enter elements of array :  ";
     //also can pre store them here 
 
+     //map<int, int> m;  
     //unordered_map<int, int> m; 
     for (int i = 0; i < n; i++)
     {
@@ -23,6 +24,7 @@ int main()
 
     // first preference should be unordered map for less tc like it gives avg and best tc O(1) worst (rare) O(n) for storing and fetching
 
+    //map<int, int> m;  
     unordered_map<int, int> m;  
     for (int i = 0; i < n; i++)
     {
